@@ -48,9 +48,26 @@ function renderSpellbook(spellbook, index) {
 
 
 function spellbookClicked(spellbook) {
-    console.log(spellbook);
+    spellbooksContainer.innerHTML = ""
+
+    spellbook.spells.forEach((spell, index) => {
+        spellbooksContainer.appendChild(renderSpell(spell, index))
+    });
+    
 }
 
+
+
+function renderSpell(spell, index) {
+    const spellHTML = document.createElement("div")
+    spellHTML.setAttribute('class', 'spell-name')
+    spellHTML.id = `spell-${index}`
+
+    spellNameHTML = document.createTextNode(spell.name)
+    spellHTML.appendChild(spellNameHTML)
+    
+    return spellHTML;
+}
 
 
 
