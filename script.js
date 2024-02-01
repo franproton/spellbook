@@ -1,14 +1,4 @@
-
-function Spellbook() {
-    spells = []
-}
-
-function Spell(name, description) {
-    this.name = name
-    this.description = description
-}
-
-const spellbooksContainer = document.getElementById('spellbooks-container')
+const spellbookContainer = document.getElementById('spellbooks-container')
 
 const databaseURL = "db.json"
 
@@ -16,57 +6,54 @@ const databaseURL = "db.json"
 fetch(databaseURL).then(response => {
     return response.json();
 }).then(database => {
-    parseDatabase(database)
+    parseArrayToHTML(database, 'spellbook')
 })
 
 
+// Now with event listeners!
+function parseArrayToHTML(database, type) {
+    arrayDOMPointers = []
 
-function parseDatabase(database) {
-    spellbooksDOMPointers = []
-
-    database.forEach((spellbook, index) => {
-        spellbooksContainer.appendChild(renderSpellbook(spellbook, index))
+    database.forEach((element, index) => {
+        spellbookContainer.appendChild(renderElement(element, index, type))
         
-        spellbooksDOMPointers.push(document.getElementById(`spellbook-${index}`))
+        arrayDOMPointers.push(document.getElementById(`${type}-${index}`))
  
-        spellbooksDOMPointers[index].addEventListener('click', () => {spellbookClicked(spellbook)})    
+        arrayDOMPointers[index].addEventListener('click', () => {elementClicked(element, 'spell')})    
     });
 }
 
+function renderElement(element, index, type) {
+    const elementHTML = document.createElement("div")
+    elementHTML.setAttribute('class', `${type}-name`)
+    elementHTML.id = `${type}-${index}`
 
-
-function renderSpellbook(spellbook, index) {
-    const spellbookHTML = document.createElement("div")
-    spellbookHTML.setAttribute('class', 'spellbook-name')
-    spellbookHTML.id = `spellbook-${index}`
-
-    spellbookNameHTML = document.createTextNode(spellbook.name)
-    spellbookHTML.appendChild(spellbookNameHTML)
+    elementNameHTML = document.createTextNode(element.name)
+    elementHTML.appendChild(elementNameHTML)
     
-    return spellbookHTML;
+    return elementHTML;
 }
 
 
-function spellbookClicked(spellbook) {
-    spellbooksContainer.innerHTML = ""
+//Can this function and parseArrayToHTML be combined into one and call itself but with a different list?
+function elementClicked(spellbook, type) {
+    spellbookContainer.innerHTML = ""
+    spellsDOMPointers = []
 
     spellbook.spells.forEach((spell, index) => {
-        spellbooksContainer.appendChild(renderSpell(spell, index))
+        spellbookContainer.appendChild(renderElement(spell, index, type))
+
+        spellsDOMPointers.push(document.getElementById(`${type}-${index}`))
+
+        spellsDOMPointers[index].addEventListener('click', () => {renderSpell(spell)})    
     });
-    
 }
 
-
-
-function renderSpell(spell, index) {
-    const spellHTML = document.createElement("div")
-    spellHTML.setAttribute('class', 'spell-name')
-    spellHTML.id = `spell-${index}`
-
-    spellNameHTML = document.createTextNode(spell.name)
-    spellHTML.appendChild(spellNameHTML)
+function renderSpell(spell) {
+    spellbookContainer.innerHTML =
+    `
     
-    return spellHTML;
+    `
 }
 
 
