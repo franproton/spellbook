@@ -50,9 +50,26 @@ function elementClicked(spellbook, type) {
 }
 
 function renderSpell(spell) {
+    console.log(spell);
     spellbookContainer.innerHTML =
     `
-    
+    <div class="spell-container">
+        <div class="inner-container">
+            <div class="top-section">
+                <div class="name">${spell.name}</div>
+                <div class="spell-level">Nivel ${spell.level}, ${spell.school} ${spell.ritual ? '(ritual)' : null}</div>
+            </div>
+            <div class="middle-section">
+                <div class="casting-time">Tiempo de lanzamiento ${spell.castingTime}</div>
+                <div class="range">Alcance ${spell.range}</div>
+                <div class="components">Componentes ${spell.components}</div>
+                <div class="duration">Duracion ${spell.duration} ${spell.concentration ? '(concentracion)' : null}</div>
+            </div>
+            <div class="bottom-section">
+                <div class="description">${spell.description}</div>
+            </div>
+        </div>
+    </div>
     `
 }
 

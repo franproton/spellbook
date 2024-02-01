@@ -17,8 +17,11 @@ html {
 }
 
 .inner-container{
-    display: flex;
+    display: grid;
     border: 2px solid black;
     border-radius: 5px;
     height: 100%;
+    white-space: pre-wrap;
+
+    padding: 20px;
 }
