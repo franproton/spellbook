@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Gandalf's spellbook",
+        "spells": [
+            {
+                "name": "You shall not pass",
+                "duration": "1 round"
+            },
+            {
+                "name": "Big Light",
+                "duration": "1 round"
+            }
+        ]
+    },
+    {
+        "name": "Loki's spellbook",
+        "spells": [
+            {
+                "name": "Disguise self",
+                "duration": "1 round"
+            },
+            {
+                "name": "Invisibility",
+                "duration": "1 round"
+            }
+        ]
+    },
+    {
+        "name": "Magnus's spellbook",
+        "spells": [
+            {
+                "name": "Fireball",
+                "duration": "1 round"
+            },
+            {
+                "name": "Burning Hands",
+                "duration": "1 round"
+            }
+        ]
+    }
+]
