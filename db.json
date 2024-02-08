@@ -3,45 +3,6 @@
         "name": "Gandalf's spellbook",
         "spells": [
             {
-                "name": "Detectar Magia",
-                "level": "1",
-                "school": "adivinacion",
-                "ritual": "true",
-                "components": "V,S",
-                "castingTime": "1 accion",
-                "range": "personal",
-                "duration": "10 minutos",
-                "concentration": "true",
-                "description": "Mientras dura el conjuro, sientes la presencia de la magia hasta a 30 pies de ti. Si sientes alguna magia, puedes usar tu acción para ver una débil aura alrededor de cualquier criatura u objeto visible dentro del área que la tenga, y puedes averiguar de qué escuela es, si la tiene.\n\nEl conjuro puede penetrar la mayoría de las barreras, pero no a partir de 1 pie de piedra, 1 pulgada de metal común, una lámina de plomo o 3 pies de madera o tierra.",
-                "higherLevels": "false"
-            },
-            {
-                "name": "Ilusion Menor",
-                "level": "Truco",
-                "school": "ilusión",
-                "ritual": "false",
-                "components": "S, M (un poco de vellón)",
-                "castingTime": "1 accion",
-                "range": "30 pies",
-                "duration": "1 minuto",
-                "concentration": "false",
-                "description": "Creas un sonido o una imagen de un objeto dentro del alcance que dura mientras lo haga el conjuro. La ilusión también termina si la disipas como acción o si vuelves a lanzar el conjuro.\n\nSi creas un sonido, su volumen puede ser desde un susurro hasta un grito. Puede ser tu voz, la voz de otra persona, el rugido de un león, un repique de tambores o cualquier otro sonido que elijas. Puedes hacer que el sonido continúe sin cesar mientras dura el conjuro o hacer un sonido discreto en diferentes momentos.\n\nSi creas una imagen de un objeto (como una silla, huellas de barro o un cofre pequeño), debe ser menor que un cubo de 5 pies. La imagen no puede reproducir sonidos, luces, olor ni ningún otro efecto sensorial. Interactuar físicamente con la imagen revela que es una ilusión, dado que las cosas pueden atravesarla.\n\nSi una criatura usa su acción para examinar el sonido o la imagen, esta puede determinar que es una ilusión si tiene éxito en una prueba de Inteligencia (Investigación) enfrentada a la CD de tu conjuro. Si la criatura discierne la ilusión por lo que es, esta se vuelve borrosa para ella.\n\n",
-                "higherLevels": "false"
-            },
-            {
-                "name": "Ilusion Menor",
-                "level": "Truco",
-                "school": "ilusión",
-                "ritual": "false",
-                "components": "S, M (un poco de vellón)",
-                "castingTime": "1 accion",
-                "range": "30 pies",
-                "duration": "1 minuto",
-                "concentration": "false",
-                "description": "",
-                "higherLevels": "false"
-            },
-            {
                 "name": "DETECTAR MAGIA",
                 "level": "Nivel 1",
                 "school": "adivinación (ritual)",
