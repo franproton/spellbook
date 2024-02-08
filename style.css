@@ -44,13 +44,17 @@ html {
     height: 25px;
 }
 
-.list-item > .prepared::after{
+.list-item > .prepared-true{
+}
+
+.list-item > .prepared-true::after{
     content: "";
     display: block;
     border-radius: 10px;
     height: 100%;
     width: 100%;
     background-color: black;
+    z-index: 1;
 }
 
 .list-item > .level{
@@ -76,6 +80,17 @@ html {
     overflow: scroll;
 }
 
-.spell-container .description {
+.spell-container #back-button {
+    position: absolute;
+    
+    display: grid;
+    justify-items: center;
+
+    border: 2px solid black;
+    border-radius: 5px; 
+    width: 50px;
+
+    left: 85.4%;
     
 }
+
