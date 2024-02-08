@@ -25,3 +25,49 @@ html {
 
     padding: 20px;
 }
+
+.list{
+    display: grid;
+
+
+    align-items: center;
+}
+
+.list-item{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 25px 30px;
+    column-gap: 10px;
+    align-items: center;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+
+    border-bottom: 1px solid black;
+}
+
+.list-item:last-child{
+    border-bottom: 0;
+}
+
+.list-item > .prepared{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 3px;
+    width: 25px;
+    height: 25px;
+}
+
+.list-item > .prepared::after{
+    content: "";
+    display: block;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.list-item > .level{
+    justify-self: center;
+}
