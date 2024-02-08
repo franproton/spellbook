@@ -11,21 +11,6 @@ html {
     font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
-.spell-container{
-    padding: 10px;
-    height: 100vh;
-}
-
-.inner-container{
-    display: grid;
-    border: 2px solid black;
-    border-radius: 5px;
-    height: 100%;
-    white-space: pre-wrap;
-
-    padding: 20px;
-}
-
 .list{
     display: grid;
 
@@ -70,4 +55,27 @@ html {
 
 .list-item > .level{
     justify-self: center;
+}
+
+
+
+.spell-container{
+    padding: 10px;
+    height: 100vh;
+}
+
+.inner-container{
+    display: grid;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 100%;
+    white-space: pre-wrap;
+
+    padding: 20px;
+
+    overflow: scroll;
+}
+
+.spell-container .description {
+    
 }
