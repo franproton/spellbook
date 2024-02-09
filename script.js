@@ -4,6 +4,25 @@ const databaseURL = "db.json"
 
 let currentScope = []
 
+fullscreenButton = document.getElementById('fullscreen-button')
+fullscreenButton.addEventListener(
+    "click",
+    (e) => {
+        toggleFullScreen()
+        fullscreenButton.style.display = 'none'
+    },
+    false,
+  );
+
+function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+}
+
+
 
 fetch(databaseURL).then(response => {
     return response.json();
